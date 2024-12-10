@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contatos</title>
+    <link rel="stylesheet" href="logins.css">
+    <style>
+       body {
+    margin: 0;
+    padding: 0;
+    background: url('bg.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: "Rubik", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #000; /* Texto preto */
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 20px;
+}
+
+.glassBox {
+    background: rgba(255, 255, 255, 0.8); /* Fundo translúcido com opacidade maior */
+    backdrop-filter: blur(10px);
+    border-radius: 23px;
+    box-shadow: 
+        rgba(0, 0, 0, 0.25) 0px 54px 55px,
+        rgba(0, 0, 0, 0.12) 0px -12px 30px,
+        rgba(0, 0, 0, 0.12) 0px 4px 6px,
+        rgba(0, 0, 0, 0.17) 0px 12px 13px,
+        rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    padding: 30px;
+    width: 400px;
+    transition: all 0.5s ease-in-out;
+    color: #000; /* Texto preto */
+}
+
+.glassBox h1 {
+    font-size: 24px;
+    text-align: center;
+    color: #000; /* Texto preto */
+    margin-bottom: 20px;
+    text-shadow: none; /* Remove sombra do texto */
+}
+
+input {
+    color: #000; /* Texto preto nos inputs */
+}
+
+
+  
+  .glassBox:hover {
+    transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+  }
+  
+  h1 {
+    font-size: 24px;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 20px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  
+  /* Estilo da tabela */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  th, td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ccc;
+  }
+  
+  th {
+    background-color: #cd8d82;
+    color: white;
+  }
+  
+  tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  tr:hover {
+    background-color: rgba(205, 141, 130, 0.2);
+  }
+  
+  /* Estilo dos inputs */
+ input {
+    width: 92%;
+    padding: 12px;
+    margin-bottom: 15px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+    color: #898686;
+    transition: all 0.3s ease;
+  }
+  
+  input:focus {
+    outline: none;
+    border-color: #cd8d82;
+    box-shadow: 0 0 5px rgba(205, 141, 130, 0.8);
+  }
+  
+  /* Botões */
+ /* Botão corrigido */
+button {
+    width: 100%;
+
+    padding: 12px;
+    background-color: #357753;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 23px;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: hsl(88, 32%, 24%);
+    transform: scale(1.1);
+    width: 100%;
+    width: 100px;
+
+}
+
+  
+  /* Estilo responsivo */
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+    }
+  
+    .glassBox {
+      width: 90%;
+    }
+  }
+ 
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="glassBox">
+            <h2>Se tiver tempo, nos mande um email!</h2>
+            <br>
+         
+          
+        <center> <h3 id="email" > email.com</h3></center>
+            <br>
+         <center>   <button class="button" onclick="copyToClipboard('email')">Copiar Email</button></center>
+<br>
+<br>
+           <br>
+    
+         
+       <CENTER> <h3 id="whatsapp">116999696</h3></CENTERS>
+          <center>  <button class="button" onclick="copyToClipboard('whatsapp')">Copiar WhatsApp</button></center>
+        
+        </div>
+    </div>
+
+    <script>
+        function copyToClipboard(id) {
+            const text = document.getElementById(id).textContent;
+            navigator.clipboard.writeText(text).then(() => {
+                alert(`${text} copiado para a área de transferência!`);
+            }).catch(err => {
+                alert('Erro ao copiar: ' + err);
+            });
+        }
+    </script>
+</body>
+</html>
